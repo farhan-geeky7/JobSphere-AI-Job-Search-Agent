@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobSphere Test Application</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background:
+                radial-gradient(
+                    circle at top,
+                    #24304a 0%,
+                    #111827 45%,
+                    #080c14 100%
+                );
+            color: white;
+            min-height: 100vh;
+        }
+
+        .form-box {
+            width: 100%;
+            max-width: 760px;
+            margin: auto;
+            background: rgba(31, 41, 55, 0.96);
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        h1 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            color: #aeb8c8;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #93c5fd;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px;
+            border-radius: 9px;
+            border: 1px solid #374151;
+            background: #f9fafb;
+            color: #111827;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #60a5fa;
+            box-shadow:
+                0 0 0 3px rgba(96, 165, 250, 0.15);
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+        }
+
+        .review-box {
+            margin-top: 30px;
+            padding: 18px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid #374151;
+        }
+
+        .review-box strong {
+            color: #93c5fd;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 9px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #reviewBtn {
+            background: #2563eb;
+            color: white;
+        }
+
+        #reviewBtn:hover {
+            background: #1d4ed8;
+        }
+
+        #submitBtn {
+            background: #374151;
+            color: #d1d5db;
+        }
+
+        #submitBtn:hover {
+            background: #4b5563;
+        }
+
+        #statusMessage {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 9px;
+            display: none;
+            background: #172033;
+            color: #bfdbfe;
+        }
+
+        .warning {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 12px;
+            }
+
+            .form-box {
+                padding: 22px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .button-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h1>Job Application Form</h1>
+
+    <div class="subtitle">
+        JobSphere Application Agent — Test Environment
+    </div>
+
+    <form id="applicationForm">
+
+        <!-- PERSONAL INFORMATION -->
+
+        <div class="section-title">
+            Personal Information
+        </div>
+
+        <label for="name">
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            id="name"
+            name="full_name"
+            placeholder="Enter your full name"
+        >
+
+        <label for="email">
+            Email Address
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+        >
+
+        <label for="phone">
+            Phone Number
+        </label>
+
+        <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+        >
+
+
+        <!-- PROFESSIONAL INFORMATION -->
+
+        <div class="section-title">
+            Professional Information
+        </div>
+
+        <label for="role">
+            Preferred Role
+        </label>
+
+        <select
+            id="role"
+            name="preferred_role"
+        >
+            <option value="">
+                Select Role
+            </option>
+
+            <option value="Python Developer">
+                Python Developer
+            </option>
+
+            <option value="Java Developer">
+                Java Developer
+            </option>
+
+            <option value="Machine Learning">
+                Machine Learning
+            </option>
+
+            <option value="AI Engineer">
+                AI Engineer
+            </option>
+
+            <option value="Software Engineer">
+                Software Engineer
+            </option>
+
+            <option value="Data Analyst">
+                Data Analyst
+            </option>
+
+            <option value="Data Scientist">
+                Data Scientist
+            </option>
+
+            <option value="Backend Developer">
+                Backend Developer
+            </option>
+
+            <option value="Frontend Developer">
+                Frontend Developer
+            </option>
+
+            <option value="Full Stack Developer">
+                Full Stack Developer
+            </option>
+
+            <option value="DevOps Engineer">
+                DevOps Engineer
+            </option>
+
+        </select>
+
+
+        <label for="experience">
+            Experience
+        </label>
+
+        <input
+            type="text"
+            id="experience"
+            name="experience"
+            placeholder="Example: 0 years"
+        >
+
+
+        <label for="skills">
+            Technical Skills
+        </label>
+
+        <input
+            type="text"
+            id="skills"
+            name="skills"
+            placeholder="Python, SQL, Java, Git"
+        >
+
+
+        <!-- APPLICATION QUESTIONS -->
+
+        <div class="section-title">
+            Application Questions
+        </div>
+
+        <label for="cover_letter">
+            Why should we hire you?
+        </label>
+
+        <textarea
+            id="cover_letter"
+            name="cover_letter"
+            placeholder="Write your answer"
+        ></textarea>
+
+
+        <!-- RESUME -->
+
+        <div class="section-title">
+            Resume
+        </div>
+
+        <label for="resume">
+            Upload Resume
+        </label>
+
+        <input
+            type="file"
+            id="resume"
+            name="resume"
+            accept=".pdf"
+        >
+
+
+        <!-- REVIEW -->
+
+        <div class="review-box">
+
+            <strong>
+                JobSphere Review
+            </strong>
+
+            <p>
+                The agent fills the application using
+                your detected CV information.
+            </p>
+
+            <p>
+                Final submission remains under
+                user control.
+            </p>
+
+            <div class="warning">
+                This is a local test application.
+            </div>
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="button-row">
+
+            <button
+                type="button"
+                id="reviewBtn"
+            >
+                Review Application
+            </button>
+
+            <button
+                type="submit"
+                id="submitBtn"
+            >
+                Submit Application
+            </button>
+
+        </div>
+
+
+        <div id="statusMessage"></div>
+
+    </form>
+
+</div>
+
+
+<script>
+
+    const form =
+        document.getElementById("applicationForm");
+
+    const reviewBtn =
+        document.getElementById("reviewBtn");
+
+    const statusMessage =
+        document.getElementById("statusMessage");
+
+
+    // Review button
+
+    reviewBtn.addEventListener(
+        "click",
+        function () {
+
+            statusMessage.style.display =
+                "block";
+
+            statusMessage.innerText =
+                "Application reviewed successfully. " +
+                "Please check all information before final submission.";
+
+        }
+    );
+
+
+    // Local test submission
+
+    form.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            statusMessage.style.display =
+                "block";
+
+            statusMessage.innerText =
+                "Test submission received. " +
+                "No real application was submitted.";
+
+        }
+    );
+
+</script>
+
+</body>
+
+</html>

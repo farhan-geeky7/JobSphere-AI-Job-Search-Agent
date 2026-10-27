@@ -1,0 +1,156 @@
+{
+    "url": "http://127.0.0.1:8000/frontend/test_application.html",
+    "title": "JobSphere Test Application",
+    "forms_found": 1,
+    "form_elements_found": 8,
+    "login_detected": false,
+    "human_verification_required": false,
+    "verification_reason": "",
+    "fields": [
+        {
+            "index": 0,
+            "tag": "input",
+            "type": "text",
+            "name": "full_name",
+            "id": "name",
+            "placeholder": "Enter your full name",
+            "aria_label": ""
+        },
+        {
+            "index": 1,
+            "tag": "input",
+            "type": "email",
+            "name": "email",
+            "id": "email",
+            "placeholder": "Enter your email",
+            "aria_label": ""
+        },
+        {
+            "index": 2,
+            "tag": "input",
+            "type": "tel",
+            "name": "phone",
+            "id": "phone",
+            "placeholder": "Enter your phone number",
+            "aria_label": ""
+        },
+        {
+            "index": 3,
+            "tag": "select",
+            "type": "",
+            "name": "preferred_role",
+            "id": "role",
+            "placeholder": "",
+            "aria_label": ""
+        },
+        {
+            "index": 4,
+            "tag": "input",
+            "type": "text",
+            "name": "experience",
+            "id": "experience",
+            "placeholder": "Example: 0 years",
+            "aria_label": ""
+        },
+        {
+            "index": 5,
+            "tag": "input",
+            "type": "text",
+            "name": "skills",
+            "id": "skills",
+            "placeholder": "Python, SQL, Java, Git",
+            "aria_label": ""
+        },
+        {
+            "index": 6,
+            "tag": "textarea",
+            "type": "",
+            "name": "cover_letter",
+            "id": "cover_letter",
+            "placeholder": "Write your answer",
+            "aria_label": ""
+        },
+        {
+            "index": 7,
+            "tag": "input",
+            "type": "file",
+            "name": "resume",
+            "id": "resume",
+            "placeholder": "",
+            "aria_label": ""
+        }
+    ],
+    "classified_fields": {
+        "full_name": {
+            "index": 0,
+            "tag": "input",
+            "type": "text",
+            "name": "full_name",
+            "id": "name",
+            "placeholder": "Enter your full name",
+            "aria_label": ""
+        },
+        "email": {
+            "index": 1,
+            "tag": "input",
+            "type": "email",
+            "name": "email",
+            "id": "email",
+            "placeholder": "Enter your email",
+            "aria_label": ""
+        },
+        "phone": {
+            "index": 2,
+            "tag": "input",
+            "type": "tel",
+            "name": "phone",
+            "id": "phone",
+            "placeholder": "Enter your phone number",
+            "aria_label": ""
+        },
+        "experience": {
+            "index": 4,
+            "tag": "input",
+            "type": "text",
+            "name": "experience",
+            "id": "experience",
+            "placeholder": "Example: 0 years",
+            "aria_label": ""
+        },
+        "skills": {
+            "index": 5,
+            "tag": "input",
+            "type": "text",
+            "name": "skills",
+            "id": "skills",
+            "placeholder": "Python, SQL, Java, Git",
+            "aria_label": ""
+        },
+        "cover_letter": {
+            "index": 6,
+            "tag": "textarea",
+            "type": "",
+            "name": "cover_letter",
+            "id": "cover_letter",
+            "placeholder": "Write your answer",
+            "aria_label": ""
+        },
+        "resume": {
+            "index": 7,
+            "tag": "input",
+            "type": "file",
+            "name": "resume",
+            "id": "resume",
+            "placeholder": "",
+            "aria_label": ""
+        }
+    },
+    "submit_buttons": [
+        {
+            "index": 1,
+            "text": "submit application",
+            "value": "",
+            "aria_label": ""
+        }
+    ]
+}
