@@ -3,26 +3,26 @@
 JobSphere is a Python and FastAPI-based project designed to help job seekers discover relevant opportunities by comparing job listings with their skills and career preferences.
 
 The project includes a web dashboard, job-source integrations, job-matching logic, and experimental browser-based application assistance.
-
 ## Dashboard Preview
 
 ### 1. Homepage
 
 The JobSphere homepage provides an overview of the AI-powered job search and matching platform.
 
-[**View Homepage Screenshot**](docs/screenshots/homepage.png)
+![JobSphere Homepage](./docs/screenshots/homepage.png)
 
 ### 2. Resume Upload and Job Search
 
 This section shows the resume upload interface and job search form used to explore relevant job opportunities.
 
-[**View Resume Upload and Job Search Screenshot**](docs/screenshots/resume-upload.png)
+![Resume Upload and Job Search](./docs/screenshots/resume-upload.png)
 
 ### 3. How It Works
 
 This section presents the workflow and supporting information displayed on the JobSphere website.
 
-[**View How It Works Screenshot**](docs/screenshots/how-it-works.png)
+![How JobSphere Works](./docs/screenshots/how-it-works.png)
+
 
 ## Key Features
 
