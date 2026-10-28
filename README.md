@@ -6,89 +6,41 @@ The project includes a web dashboard, job-source integrations, job-matching logi
 
 ## Dashboard Preview
 
-### Homepage
+### 1. Homepage
 
-![JobSphere Homepage](docs/screenshots/homepage.png)
+The JobSphere homepage provides an overview of the AI-powered job search and matching platform.
 
-### Resume Upload and Job Search
+[**View Homepage Screenshot**](docs/screenshots/homepage.png)
 
-![Resume Upload and Job Search](docs/screenshots/resume-upload.png)
+### 2. Resume Upload and Job Search
 
-### How It Works
+This section shows the resume upload interface and job search form used to explore relevant job opportunities.
 
-![How JobSphere Works](docs/screenshots/how-it-works.png)
+[**View Resume Upload and Job Search Screenshot**](docs/screenshots/resume-upload.png)
+
+### 3. How It Works
+
+This section presents the workflow and supporting information displayed on the JobSphere website.
+
+[**View How It Works Screenshot**](docs/screenshots/how-it-works.png)
 
 ## Key Features
 
-- **Job Discovery:** Collect job listings from configured job sources.
-- **Job Matching:** Evaluate available jobs against profile details and role preferences.
+- **Job Discovery:** Retrieve job listings from configured job sources.
+- **Job Matching:** Compare job listings with profile details and relevant skills.
 - **Web Dashboard:** Access the project through a browser-based interface.
-- **Resume Workflow:** Resume upload and profile analysis are part of the intended workflow; verify the current implementation before relying on every step.
-- **Application Assistance:** Experimental modules explore application-page analysis and form-filling support.
-
-## How It Works
-
-1. Start the FastAPI backend.
-2. Open the JobSphere dashboard.
-3. Enter job preferences and provide a resume where supported.
-4. Retrieve jobs from configured sources.
-5. Review the available matches and visit the original job postings.
+- **Resume Workflow:** Support for resume upload and profile analysis, depending on the implemented functionality.
+- **Application Assistance:** Experimental tools for application-page analysis and form filling.
 
 ## Technology Stack
 
 - Python
 - FastAPI
-- HTML, CSS and JavaScript
-- Job aggregation and matching modules
-- Browser automation components
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.10 or later
-- Git
-
-### Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR-USERNAME/JobSphere-AI-Job-Search-Agent.git
-cd JobSphere-AI-Job-Search-Agent
-```
-
-Create and activate a virtual environment from the project root:
-
-**Windows PowerShell**
-
-```powershell
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-Install the project dependencies after a root-level `requirements.txt` has been provided:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run the Backend
-
-```powershell
-cd backend
-python -m uvicorn main:app --reload
-```
-
-Open the dashboard:
-
-http://127.0.0.1:8000/dashboard
-
-Interactive API documentation may be available at:
-
-http://127.0.0.1:8000/docs
-
-> Note: Fresh-install instructions depend on the final dependency list. The project currently uses a backend virtual environment; setup commands may need adjustment until dependencies are documented.
+- Uvicorn
+- HTML, CSS, and JavaScript
+- Requests
+- pypdf
+- Playwright
 
 ## Project Structure
 
@@ -99,29 +51,114 @@ JobSphere/
 │   ├── frontend/
 │   ├── job_sources/
 │   ├── models/
-│   └── main.py
+│   ├── main.py
+│   └── requirements.txt
 ├── docs/
 │   └── screenshots/
 ├── .gitignore
 └── README.md
 ```
 
-## Roadmap
+## Getting Started
 
-See [ROADMAP.md](ROADMAP.md) for planned improvements and development priorities.
+### Prerequisites
 
-## Current Status
+- Python
+- Git
+- A modern web browser
 
-JobSphere is a work in progress. Job-source availability, matching quality, resume handling, and browser automation require ongoing testing. Application submission should always be reviewed and authorized by the user.
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/farhan-geeky7/JobSphere-AI-Job-Search-Agent.git
+cd JobSphere-AI-Job-Search-Agent
+```
+
+### 2. Open the Backend Directory
+
+```bash
+cd backend
+```
+
+### 3. Create a Virtual Environment
+
+On Windows PowerShell:
+
+```powershell
+py -m venv venv
+```
+
+Activate the environment:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, use the environment's Python executable directly.
+
+### 4. Install Dependencies
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+### 5. Install the Playwright Browser
+
+If browser automation is required, install Chromium:
+
+```bash
+python -m playwright install chromium
+```
+
+### 6. Start the Backend
+
+Run this command from the `backend` directory:
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+Open the dashboard:
+
+http://127.0.0.1:8000/dashboard
+
+FastAPI documentation:
+
+http://127.0.0.1:8000/docs
+
+## How It Works
+
+1. Start the FastAPI backend.
+2. Open the dashboard in your browser.
+3. Enter job preferences and upload a resume where supported.
+4. Retrieve job listings from configured sources.
+5. Review matching results and open the original job postings.
+6. Review application details before submitting an application.
+
+Available functionality depends on the current implementation and supported job sources.
+
+## Privacy and Security
+
+- Do not commit personal resumes, uploaded documents, passwords, API keys, or secret environment files to GitHub.
+- Keep private user data out of version control.
+- Verify job postings on the original website before sharing personal information.
+- Follow the terms and automation policies of each job platform.
+
+## Current Project Status
+
+JobSphere is a work in progress. Job-source integrations, matching quality, resume handling, and browser automation require testing. Experimental application assistance may not work on every website.
 
 ## Contributing
 
-Issues, suggestions, and improvements are welcome. Please describe bugs clearly and include reproduction steps where possible.
-
-## Disclaimer
-
-This project is intended to assist with job discovery and matching. Always verify job details on the original employer or job-platform website before sharing personal information or applying.
+Suggestions, bug reports, and contributions are welcome. Please describe issues clearly and include steps to reproduce them.
 
 ## Author
 
-Created as a project to explore Python, FastAPI, job aggregation, resume matching, and browser automation.
+**Farhan Alam**
+
+GitHub: [@farhan-geeky7](https://github.com/farhan-geeky7)
+
+## License
+
+No license has been specified for this repository yet. Add a license before permitting others to reuse or redistribute the project under specific terms.
